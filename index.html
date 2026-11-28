@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WattWhy LK | Stop Guessing. Start Saving.</title>
+  <meta name="description" content="WattWhy LK is an affordable, non-invasive smart home energy system built for Sri Lankan households. Understand bill changes, forecast tariff blocks and cut power costs.">
+  <meta name="theme-color" content="#0C1220">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Sinhala:wght@400;600;700&family=Noto+Sans+Tamil:wght@400;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+        display: ['Plus Jakarta Sans', 'sans-serif']
+      } } }
+    };
+  </script>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="bg-white text-slate-800 font-sans antialiased selection:bg-indigo-600 selection:text-white overflow-x-hidden">
+  <div id="scrollProgress"></div>
+
+  <!-- Announcement -->
+  <aside class="bg-[#0a0f1d] border-b border-white/10 text-xs sm:text-sm py-2.5 px-4 text-center text-slate-300">
+    <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-indigo-500/20 text-indigo-300 border border-indigo-400/30 mr-2">Now Recruiting</span>
+    <span>Exclusive <strong>5 to 10 Home Pilot Program</strong> in Western &amp; Central Provinces.</span>
+    <a href="#pilot" class="underline underline-offset-4 font-semibold text-white hover:text-indigo-300 ml-1">Apply for early access →</a>
+  </aside>
+
+  <!-- Header -->
+  <header id="mainHeader" class="sticky top-0 z-50 backdrop-blur-xl bg-[#080C14]/95 border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3" aria-label="WattWhy LK home">
+        <img src="assets/logo-mark.png" alt="" width="44" height="52" class="h-11 w-auto">
+        <span class="leading-tight">
+          <span class="block font-display font-bold text-xl text-white">WattWhy <span class="text-xs px-1.5 py-0.5 rounded bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 align-middle">LK</span></span>
+          <span class="block text-[10px] text-slate-400">Smart Energy for Sri Lanka</span>
+        </span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300" aria-label="Primary">
+        <a href="#problem" class="hover:text-white">The Problem</a>
+        <a href="#features" class="hover:text-white">Features</a>
+        <a href="#simulator" class="hover:text-white">Calculator</a>
+        <a href="#advantage" class="hover:text-white">LK Advantage</a>
+        <a href="#safety" class="hover:text-white">Safety</a>
+        <a href="#team" class="hover:text-white">Team</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="#pilot" class="btn gradient-purple-blue-bg gradient-purple-blue-glow hidden sm:inline-flex !py-2.5 !px-5 text-sm">Join Pilot Program</a>
+        <button id="mobileMenuBtn" type="button" class="md:hidden p-2 text-slate-300 text-2xl leading-none" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="hidden md:hidden border-t border-slate-800 bg-[#080C14] px-6 py-5">
+      <nav class="flex flex-col gap-1 text-slate-300 font-medium" aria-label="Mobile">
+        <a href="#problem" class="mobile-link py-2">The Problem</a>
+        <a href="#features" class="mobile-link py-2">Features</a>
+        <a href="#simulator" class="mobile-link py-2">Rupee Calculator</a>
+        <a href="#advantage" class="mobile-link py-2">LK Advantage</a>
+        <a href="#safety" class="mobile-link py-2">Safety</a>
+        <a href="#team" class="mobile-link py-2">Team</a>
+        <a href="#pilot" class="mobile-link btn gradient-purple-blue-bg mt-3">Join the Pilot</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. HERO (dark) -->
+    <section id="hero" class="metallic-black-hero">
+      <div class="glow -top-32 left-1/4 w-[550px] h-[550px] bg-blue-600/15 blur-[140px]"></div>
+      <div class="glow top-1/4 right-5 w-[500px] h-[500px] bg-purple-600/15 blur-[150px]"></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-24 md:pt-20 md:pb-32 grid lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-7 space-y-6">
+          <p class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs sm:text-sm text-slate-300">
+            <span class="h-2 w-2 rounded-full bg-indigo-400"></span>
+            Built for Sri Lankan domestic tariffs (CEB &amp; LECO)
+          </p>
+          <h1 class="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-[1.12]">
+            Stop Guessing. <span class="gradient-purple-blue">Start Saving.</span> Take Control of Your Electricity Bill.
+          </h1>
+          <p class="text-base sm:text-lg lg:text-xl text-slate-300 leading-relaxed max-w-2xl">
+            <strong class="text-white">WattWhy LK</strong> is a low-cost home system that explains why your bill changed, forecasts your next bill against tariff blocks, and shows which appliances to adjust to save money.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#pilot" class="btn gradient-purple-blue-bg gradient-purple-blue-glow">Join the Pilot Program →</a>
+            <a href="#simulator" class="btn btn-ghost">Try the Rupee Calculator</a>
+          </div>
+          <ul class="flex flex-wrap gap-x-6 gap-y-2 text-xs sm:text-sm text-slate-400">
+            <li>✓ 100% non-invasive (no wire cutting)</li>
+            <li>✓ Works during power cuts</li>
+            <li>✓ Sinhala, Tamil &amp; English</li>
+          </ul>
+        </div>
+
+        <!-- Phone mockup -->
+        <div class="lg:col-span-5 relative">
+          <div class="flex items-center justify-between mb-3 px-2">
+            <span class="text-xs text-slate-400 font-medium">Interactive app preview</span>
+            <div class="inline-flex p-1 bg-white/5 border border-white/10 rounded-lg text-xs" role="group" aria-label="Preview language">
+              <button type="button" class="lang-tab active px-2.5 py-1 rounded font-medium" data-lang="en">EN</button>
+              <button type="button" class="lang-tab px-2.5 py-1 rounded font-medium text-slate-400 hover:text-white font-sinhala" data-lang="si">සිංහල</button>
+              <button type="button" class="lang-tab px-2.5 py-1 rounded font-medium text-slate-400 hover:text-white font-tamil" data-lang="ta">தமிழ்</button>
+            </div>
+          </div>
+
+          <div class="device-float metallic-chassis mx-auto max-w-[380px] rounded-[40px] p-3.5 relative">
+            <div class="rounded-[30px] bg-[#0A0F1D] border border-white/10 p-4 space-y-4 text-slate-200">
+              <div class="flex justify-between text-[11px] text-slate-400 pb-1 border-b border-white/5">
+                <span class="font-semibold text-slate-300">09:41</span>
+                <span class="text-indigo-400 font-semibold">● WattWhy Hub Live</span>
+              </div>
+
+              <div class="flex justify-between items-center">
+                <div>
+                  <p id="app-header-sub" class="text-[11px] text-slate-400 uppercase tracking-wider font-semibold">Colombo 05 Residence</p>
+                  <h2 id="app-header-title" class="text-base font-bold text-white">Monthly Bill Tracker</h2>
+                </div>
+                <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30">Day 21 of 30</span>
+              </div>
+
+              <div class="metallic-surface p-3.5 rounded-2xl space-y-3">
+                <div class="flex justify-between items-start">
+                  <div>
+                    <p id="app-card-curr-label" class="text-xs text-slate-400 font-medium">Current Metered Spend</p>
+                    <p id="app-card-curr-val" class="text-2xl font-extrabold text-white mt-0.5">Rs. 6,770</p>
+                    <p class="text-[11px] text-slate-400">142 kWh consumed</p>
+                  </div>
+                  <div class="text-right">
+                    <span id="app-card-proj-label" class="text-[10px] uppercase font-bold text-slate-400">Projected Bill</span>
+                    <p id="app-card-proj-val" class="text-base font-bold text-amber-400">Rs. 9,690</p>
+                    <p class="text-[10px] text-amber-300/80">~188 kWh total</p>
+                  </div>
+                </div>
+                <div class="w-full h-2.5 bg-black/50 rounded-full overflow-hidden flex p-0.5 gap-0.5" aria-hidden="true">
+                  <div class="bg-blue-500 rounded-l" style="width:25%" title="0–60 units"></div>
+                  <div class="bg-indigo-500" style="width:20%" title="61–90 units"></div>
+                  <div class="bg-purple-500" style="width:25%" title="91–120 units"></div>
+                  <div class="bg-amber-400 animate-pulse" style="width:26%" title="121–180 units (active)"></div>
+                  <div class="bg-slate-700 rounded-r" style="width:4%" title="180+ units"></div>
+                </div>
+                <p id="app-tier-warning-desc" class="text-[10px] text-amber-300 bg-amber-950/40 p-1.5 rounded-lg border border-amber-800/40 leading-tight">
+                  ⚠️ Crossing 180 units adds <strong>+Rs. 500</strong> in fixed charge and raises the rate to <strong>Rs. 65/unit</strong>.
+                </p>
+              </div>
+
+              <div class="space-y-2">
+                <div class="flex justify-between text-xs">
+                  <span id="app-breakdown-title" class="font-semibold text-slate-200">Where the Watts Went This Week</span>
+                  <span class="text-[10px] text-indigo-400">Proxy sensor sync</span>
+                </div>
+                <div class="flex items-center gap-2 p-2 rounded-xl bg-white/5 text-xs">
+                  <span class="w-7 h-7 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold">AC</span>
+                  <span class="flex-1"><span id="app-appliance-ac" class="block font-medium text-white">Master Bedroom AC</span><span class="text-[10px] text-slate-400">7.2 hrs avg / night</span></span>
+                  <span class="text-right"><b class="text-white">48%</b><span class="block text-[10px] text-slate-400">Rs. 3,250</span></span>
+                </div>
+                <div class="flex items-center gap-2 p-2 rounded-xl bg-white/5 text-xs">
+                  <span class="w-7 h-7 rounded-lg bg-purple-500/20 text-purple-400 flex items-center justify-center font-bold text-[10px]">REF</span>
+                  <span class="flex-1"><span id="app-appliance-ref" class="block font-medium text-white">Inverter Refrigerator</span><span class="text-[10px] text-indigo-400">Running efficiently</span></span>
+                  <span class="text-right"><b class="text-white">22%</b><span class="block text-[10px] text-slate-400">Rs. 1,490</span></span>
+                </div>
+                <div class="flex items-center gap-2 p-2 rounded-xl bg-white/5 text-xs">
+                  <span class="w-7 h-7 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-[10px]">HOT</span>
+                  <span class="flex-1"><span id="app-appliance-heater" class="block font-medium text-white">Water Heater (Hardwired)</span><span class="text-[10px] text-slate-400">Proxy vibration active</span></span>
+                  <span class="text-right"><b class="text-white">16%</b><span class="block text-[10px] text-slate-400">Rs. 1,080</span></span>
+                </div>
+              </div>
+
+              <p id="app-action-tip" class="p-2.5 rounded-xl bg-indigo-950/40 border border-indigo-500/30 text-[11px] text-indigo-200 leading-snug">
+                <strong>Smart Tip:</strong> Set the AC timer to switch off at 5:00 AM to stay below 180 units and save <strong>Rs. 1,170</strong>.
+              </p>
+            </div>
+
+            <div class="hidden sm:flex absolute -bottom-6 -left-6 items-center gap-3 bg-[#0E1526]/95 border border-white/15 rounded-2xl p-3 shadow-xl">
+              <span class="gradient-purple-blue-bg w-10 h-10 rounded-xl flex items-center justify-center">✦</span>
+              <span>
+                <b class="block text-xs text-white">Proxy Sensor Pod</b>
+                <span class="text-[11px] text-slate-400">Non-invasive · 3V coin cell · 2 yr battery</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLOT: problem (member2) - replace this line with your section -->
+
+    <!-- SLOT: features (member2) - replace this line with your section -->
+
+    <!-- SLOT: calculator (member3) - replace this line with your section -->
+
+    <!-- SLOT: advantage (member2) - replace this line with your section -->
+
+    <!-- SLOT: safety (member3) - replace this line with your section -->
+
+    <!-- SLOT: team (member2) - replace this line with your section -->
+
+    <!-- SLOT: pilot (member3) - replace this line with your section -->
+
+    <!-- SLOT: faq (member3) - replace this line with your section -->
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#090D18] border-t border-slate-800 text-slate-400 text-xs sm:text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-b border-slate-800/80">
+      <div class="reveal-scale p-8 rounded-3xl bg-gradient-to-r from-[#11192e] via-[#0d1424] to-[#11192e] border border-white/10 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="text-center md:text-left">
+          <h3 class="font-display font-bold text-xl sm:text-2xl text-white">Ready to stop guessing your next bill?</h3>
+          <p class="text-slate-400 mt-1">Applications are open for our exclusive 5 to 10 home pilot.</p>
+        </div>
+        <a href="#pilot" class="btn gradient-purple-blue-bg gradient-purple-blue-glow shrink-0">Apply for the pilot →</a>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div class="md:col-span-2 space-y-4">
+          <img src="assets/logo-full-dark.png" alt="WattWhy LK — Smart Energy for Sri Lanka" width="180" height="171" class="w-44 h-auto" loading="lazy">
+          <p class="text-xs leading-relaxed max-w-sm">An accessible smart home energy system built for Sri Lankan households, combining non-invasive proxy sensing with local tariff intelligence.</p>
+          <p class="text-xs text-slate-500">Colombo, Western Province, Sri Lanka</p>
+        </div>
+        <nav class="space-y-3" aria-label="Footer">
+          <p class="font-bold text-slate-200 uppercase text-xs tracking-wider">Navigation</p>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#problem" class="hover:text-indigo-400">The Problem</a></li>
+            <li><a href="#features" class="hover:text-indigo-400">Features</a></li>
+            <li><a href="#simulator" class="hover:text-indigo-400">Calculator</a></li>
+            <li><a href="#advantage" class="hover:text-indigo-400">LK Advantage</a></li>
+            <li><a href="#team" class="hover:text-indigo-400">Team</a></li>
+          </ul>
+        </nav>
+        <div class="space-y-3">
+          <p class="font-bold text-slate-200 uppercase text-xs tracking-wider">Pilot &amp; legal</p>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#pilot" class="hover:text-indigo-400">Pilot sign-up</a></li>
+            <li><button type="button" id="openPrivacyModal" class="hover:text-indigo-400">Privacy Policy</button></li>
+            <li><button type="button" id="openTermsModal" class="hover:text-indigo-400">Terms of Service</button></li>
+            <li><a href="#safety" class="hover:text-indigo-400">Safety standards</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="pt-8 mt-8 border-t border-slate-800 flex flex-col sm:flex-row justify-between gap-2 text-xs text-slate-500">
+        <p>© 2026 WattWhy LK. All rights reserved.</p>
+        <p>Engineered with care for CEB &amp; LECO consumers</p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" type="button" aria-label="Back to top" class="w-11 h-11 rounded-full bg-slate-900 border border-slate-700 shadow-xl text-white hover:text-indigo-400">↑</button>
+
+  <!-- Modals -->
+  <div id="privacyModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="privacyTitle">
+    <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[80vh] flex flex-col overflow-hidden shadow-2xl">
+      <div class="p-6 border-b border-slate-200 flex justify-between items-center">
+        <h3 id="privacyTitle" class="text-lg font-bold text-slate-900">Privacy Policy</h3>
+        <button id="closePrivacyModal" type="button" class="text-slate-500 hover:text-slate-800 text-xl leading-none" aria-label="Close">✕</button>
+      </div>
+      <div class="p-6 overflow-y-auto text-xs text-slate-600 space-y-4 leading-relaxed">
+        <p><strong>1. Introduction:</strong> WattWhy LK values your household's privacy. Energy telemetry collected during the pilot is stored locally on the hub and encrypted in transit.</p>
+        <p><strong>2. Data collection:</strong> We collect non-invasive telemetry only (optical pulse counts, ambient temperature, humidity and vibration signals). We do not record audio or video.</p>
+        <p><strong>3. Use of telemetry:</strong> Data is used only to evaluate appliance breakdown, tariff forecasting and anomaly detection.</p>
+        <p><strong>4. Third parties:</strong> We do not sell, rent or trade your usage data to third parties or advertisers.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="termsModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="termsTitle">
+    <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[80vh] flex flex-col overflow-hidden shadow-2xl">
+      <div class="p-6 border-b border-slate-200 flex justify-between items-center">
+        <h3 id="termsTitle" class="text-lg font-bold text-slate-900">Terms of Service</h3>
+        <button id="closeTermsModal" type="button" class="text-slate-500 hover:text-slate-800 text-xl leading-none" aria-label="Close">✕</button>
+      </div>
+      <div class="p-6 overflow-y-auto text-xs text-slate-600 space-y-4 leading-relaxed">
+        <p><strong>1. Pilot participation:</strong> Participation is voluntary and subject to hardware availability in selected provinces.</p>
+        <p><strong>2. Safety compliance:</strong> Users agree never to open, modify or tamper with utility meter seals or electrical distribution boards. Any panel work must be done by a certified electrician.</p>
+        <p><strong>3. Tariff calculations:</strong> Estimates are based on prevailing Sri Lankan domestic tariffs (CEB &amp; LECO) and are informational forecasts only.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
